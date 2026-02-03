@@ -1,16 +1,16 @@
 # 🌱 PlantHub – Virtual Plantation Recorder
 
-**PlantHub – Virtual Plantation Recorder** is a full-stack web application to record, monitor, and visualize plantation/tree growth data. It uses a Django backend with a simple frontend, integrates a machine learning model to analyze tree growth patterns, and allows users to interact with plantation records via a browser interface.
+**PlantHub – Virtual Plantation Recorder** is a full-stack web application to record, monitor, and visualize plantation. It uses a Django backend with a simple frontend, integrates a machine learning model to analyze tree, and allows users to interact with plantation records via a browser interface.
 
-This project is ideal for environmentalists, researchers, NGOs, and anyone interested in tracking plantation data and visualizing plant growth trends.
+This project is ideal for environmentalists, researchers, NGOs, and anyone interested in tracking plantation data and visualizing plant growth.
 
 ---
 
 ## 🚀 Features
 
 - 🔹 **Record plantation events** — Store details like date, tree species, location, and growth data.
-- 📊 **Visualize growth trends** — Machine learning model predicts or analyzes growth from historical data.
-- 🧠 **ML model included** — Integrated tree growth model (`tree_growth_model.pkl`) for analytics.
+- 📊 **Visualization** — Dashbord showing planted tree history.
+- 🧠 **ML model included** — Integrated tree growth model (`tree_growth_model.pkl`) .
 - 🖼️ **Frontend interface** — User-friendly templates to input and view plantation records.
 - 📂 **CSV support** — Example initial dataset (`tree_growth_data.csv`) included.
 
@@ -18,11 +18,11 @@ This project is ideal for environmentalists, researchers, NGOs, and anyone inter
 
 ## 📌 Project Overview
 
-**PlantHub – Virtual Plantation Recorder** is a web-based application designed to digitally record, track, and analyze plantation activities and tree growth over time. The project aims to promote sustainable environmental practices by providing an organized platform to monitor plantations and visualize growth trends using data-driven insights.
+**PlantHub – Virtual Plantation Recorder** is a web-based application designed to digitally record and analyze plantation activities over time. The project aims to promote sustainable environmental practices by providing an organized platform to monitor plantations and visualize them.
 
-The system allows users to log plantation details such as tree species, planting date, and growth-related parameters. These records are stored and managed using a Django backend, while the frontend offers an intuitive interface for interaction. Additionally, the project integrates a machine learning model that analyzes historical growth data to assist in understanding and predicting tree growth patterns.
+The system allows users to log plantation details such as tree species, planting date, and growth-related parameters. These records are stored and managed using a Django backend, while the frontend offers an intuitive interface for interaction. Additionally, the project integrates a machine learning model that analyzes height growth data by taking manual inputs.
 
-PlantHub bridges the gap between traditional plantation record-keeping and modern technology by combining **web development**, **data analysis**, and **machine learning** into a single platform. It can be useful for students, researchers, environmental organizations, and individuals interested in tracking and managing plantation data efficiently.
+PlantHub bridges the gap between traditional plantation record-keeping and modern technology by combining **web development** and **machine learning** into a single platform. It can be useful for students, researchers, environmental organizations, and individuals interested in managing plantation data efficiently.
 
 ---
 
