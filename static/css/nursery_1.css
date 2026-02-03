@@ -1,0 +1,111 @@
+.nursery-container {
+    max-width: 1100px;
+    margin: 60px auto 180px auto;
+    padding: 0 20px ; /* scroll space */
+}
+
+/* -------- Nursery Grid -------- */
+
+.nursery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+.nursery-card {
+    background: #f0fff4;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+    border: 2px solid transparent;
+}
+
+.nursery-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+}
+
+.nursery-card h3 {
+    color: #2a7f62;
+    margin-bottom: 6px;
+}
+
+.nursery-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Button */
+.nursery-card .btn {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 18px;
+    background: #2a7f62;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.nursery-card .btn:hover {
+    background: #1f5c48;
+}
+
+/* -------- Selected Nursery Highlight -------- */
+.nursery-card.active {
+    border: 2px solid #2a7f62;
+    background: #eafff1;
+}
+
+/* -------- Nursery Details Section -------- */
+
+.nursery-details {
+    background: #f7fff9;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.nursery-details h2 {
+    color: #2a7f62;
+    margin-bottom: 10px;
+}
+
+.nursery-details h3 {
+    color: #2a7f62;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.nursery-details p {
+    font-size: 15px;
+    color: #444;
+    margin: 4px 0;
+}
+
+/* -------- Plant & Tool Lists -------- */
+
+.nursery-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nursery-details li {
+    background: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    font-size: 14px;
+}
+
+/* Price emphasis */
+.nursery-details li span {
+    font-weight: 600;
+    color: #2a7f62;
+}

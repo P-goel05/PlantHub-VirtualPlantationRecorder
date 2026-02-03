@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Forest Facts{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/forestfacts_1.css' %} ">
+{% endblock %}
+
+{% block main %} 
+
+<section class="forest-section">
+  <h1>Forest Facts 🌳</h1>
+
+  <div class="forest-grid">
+
+    <!-- Blog Card 1 -->
+    <div class="forest-card">
+      <img src="{% static 'images/blog_1.png' %}" alt="Eco friendly habits">
+      <span class="tag climate">Climate Related</span>
+      <p class="date">Posted on 2026-01-10</p>
+      <h3>Small Daily Habits That Make a Big Environmental Impact</h3>
+      <p class="desc">
+        Simple actions like reducing plastic use, conserving water, and planting native trees can significantly lower environmental damage and help combat climate change.
+      </p>
+      <button class="read-more">Read more</button>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="forest-card">
+      <img src="{% static 'images/blog_2.png' %}" alt="Weather and trees">
+      <span class="tag climate">Climate Related</span>
+      <p class="date">Posted on 2026-01-15</p>
+      <h3>How Weather Data Helps Choose the Right Tree to Plant</h3>
+      <p class="desc">
+        Weather patterns like rainfall, temperature, and soil moisture play a crucial role in selecting the right tree species for successful and long-lasting plantation.
+      </p>
+      <button class="read-more">Read more</button>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="forest-card">
+      <img src="{% static 'images/blog_3.png' %}" alt="Tree plantation">
+      <span class="tag tree">Tree Plantation</span>
+      <p class="date">Posted on 2026-01-18</p>
+      <h3>Why Tree Plantation Is Essential for Future Generations</h3>
+      <p class="desc">
+        Trees improve air quality, support biodiversity, and reduce global warming. Planting trees today ensures a healthier planet for future generations.
+      </p>
+      <button class="read-more">Read more</button>
+    </div>
+
+    <!-- Blog Card 4 -->
+    <div class="forest-card">
+      <img src="{% static 'images/blog_4.png' %}" alt="Technology and sustainability">
+      <span class="tag tech">Sustainability & Technology</span>
+      <p class="date">Posted on 2026-01-22</p>
+      <h3>How Technology Is Transforming Tree Plantation Tracking</h3>
+      <p class="desc">
+        Digital platforms now enable real-time tree tracking, growth monitoring, and impact measurement, making plantation initiatives more transparent and efficient.
+      </p>
+      <button class="read-more">Read more</button>
+    </div>
+
+    <!-- Blog Card 5 -->
+    <div class="forest-card">
+      <img src="{% static 'images/blog_5.png' %}" alt="Positive climate action">
+      <span class="tag climate">Climate Related</span>
+      <p class="date">Posted on 2026-01-25</p>
+      <h3>Positive Environmental Changes You Can Support in 2026</h3>
+      <p class="desc">
+        Community plantations, urban green spaces, and eco-friendly initiatives are driving positive climate change. Supporting these efforts accelerates environmental recovery.
+      </p>
+      <button class="read-more">Read more</button>
+    </div>
+
+    <!-- Blog Card 6 -->
+    <div class="forest-card">
+      <img src="{% static 'images/blog_6.png' %}" alt="Community partnerships">
+      <span class="tag business">Community & Partnerships</span>
+      <p class="date">Posted on 2026-01-28</p>
+      <h3>How Community Partnerships Strengthen Green Initiatives</h3>
+      <p class="desc">
+        Collaboration between individuals, NGOs, and institutions strengthens tree plantation drives and ensures long-term commitment to environmental sustainability.
+      </p>
+      <button class="read-more">Read more</button>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

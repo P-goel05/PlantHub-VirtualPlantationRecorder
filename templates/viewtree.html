@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Plant a Tree{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/viewtree_1.css' %} ">
+{% endblock %}
+
+{% block main %}  
+ <!-- MY TREES TABLE record-->
+  <div class="view_plant">
+    <section class="view_card table-card">
+      <h3>My Planted Trees</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tree Name</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th> height </th>
+            <th>Type</th>
+          </tr>
+        </thead>
+
+        <tbody id="treeTableBody">
+          <!-- Django dynamic loop -->
+          
+          {% for tree in trees %}
+         
+          <tr>
+            <td>{{ tree.tree_name }}</td>
+            <td>{{ tree.location }}</td>
+            <td>{{ tree.planted_date }}</td>
+            <td>{{ tree.height }} m</td>
+            <td>{{ tree.tree_type }}</td>
+          </tr>
+          
+          {% endfor %}
+         
+        </tbody>
+      </table>
+     
+    </section>
+
+  
+
+  <!-- STATS dashboard-->
+  <section class="view_stats">
+    <div class="stat-box">
+      <h4 id="totalTrees">
+        {{ total_trees }}
+      </h4>
+      <p>Trees Planted</p>
+    </div>
+
+    <div class="stat-box">
+      <h4 id="co2Saved">
+        {{ total_co2 }} kg
+      </h4>
+      <p>CO₂ Saved</p>
+    </div>
+
+    <div class="stat-box">
+      <h4 id="waterSaved">
+        {{ total_water }} L
+      </h4>
+      <p>Water Conserved</p>
+    </div>
+  </section>
+
+  <!-- GROWTH dashboard-->
+  <section class="view_card growth">
+    <h3>Growth Progress</h3>
+    <div class="progress-bar">
+      <div
+        class="progress-fill" >
+        {{ growth_percentage }}%
+      </div>
+    </div>
+  </section>
+
+</div>
+{% endblock %}

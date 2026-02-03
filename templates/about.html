@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{%load static %}
+
+{% block title %} About Us - PLANT HUB {% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/about_1.css' %} ">
+{% endblock %}
+
+{% block main %}
+
+  <section id="about" class="about_card ">
+    <div class="about_container">
+
+      <h1> About PLANT HUB </h1>
+      <p>
+        Welcome to PLANT HUB, your number one source for all things related to plants and environmental sustainability. We provide a digital solution that transforms how tree plantation initiatives are managed and monitored. Our platform ensures a secure and transparent plantation process by recording each stage—from planting to long-term growth tracking.
+      </p>
+
+      <h2> Our Mission </h2>
+      <p> 
+        At PLANT HUB, our mission is to promote a greener planet by encouraging individuals and communities to plant trees and care for their environment. We believe that every tree planted contributes to a healthier ecosystem and a better future for generations to come.
+      </p>
+
+      <h2> What We Offer </h2>
+      <ul>
+        <li>
+          <strong> Plant Care Tips: </strong>
+          Expert guidance to help users nurture plants and monitor tree growtheffectively.
+        </li>
+
+        <li>
+          <strong> Digital Tree Tracking: </strong>
+          Transparent and centralized tracking of plantation data for individuals, organizations, and NGOs.
+        </li>
+
+        <li>
+          <strong> Community Initiatives: </strong>
+          Participation in environmental conservation and tree plantation drives.
+        </li>
+      </ul>
+
+      <h2> Meet the Team </h2>
+      <div class="about_team">
+
+        <div class="about_pfp">
+          <div class="profile">
+            <img src="{% static 'images/prachi.png' %}" alt="Prachi Goel">
+          </div>
+          <h3> Prachi Goel </h3>
+          <p>
+            A pro - active leader with a strong passion for environmental sustainability. Prachi contributes through leadership, coordination, and aligning the platform’s vision with real-world impacts.
+          </p>
+        </div>
+
+        <div class="about_pfp">
+          <div class="profile">
+            <img src="{% static 'images/lipika.jpg' %}" alt="Lipika Poddar">
+          </div>
+          <h3> Lipika Poddar </h3>
+          <p>
+            A technology-driven person with a deep love for nature. Lipika focuses on backend development, frontend integration, and building user-friendly solutions that support sustainability goals.
+          </p>
+        </div>
+
+        <div class="about_pfp">
+          <div class="profile">
+            <img src="{% static 'images/aman.png' %}" alt="Aman Dhyani">
+          </div>
+          <h3> Aman Dhyani </h3>
+          <p>
+            A collaborative team player with strong analytical and leadership skills. Aman supports in frontend development and ensures smooth and reliable platform functionality.
+          </p>
+        </div>
+      </div>
+
+      <h2>Join Us</h2>
+      <p>
+        We invite you to join us in our mission to make the world a greener place. Whether you're a beginner or an environmental enthusiast, PLANT HUB is here to support you every step of the way. Together, we can make a difference— one tree at a time.
+      </p>
+
+      <p><strong>Thank you for being a part of the PLANT HUB community!</strong></p>
+
+    </div>
+  </section>
+
+{% endblock %}

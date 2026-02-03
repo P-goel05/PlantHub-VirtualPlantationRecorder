@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Contact Us - PLANT HUB {% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/contact_1.css' %} ">
+{% endblock %}
+
+{% block main %}
+
+<section id="contact" class="contact_card">
+
+  <div class="contact_header">
+    <h2> Contact Us </h2>
+    <p> Have a question, suggestion, or collaboration idea? <br> We'd love to hear from you! </p>
+  </div>
+
+  <div class="contact_options">
+
+    <!-- EMAIL US -->
+    <div class="option_box">
+      <div class="icon">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <h3> Email us </h3>
+      <p> If you have any questions, please let us know. Don't forget to check our FAQ first. </p>
+      <a class="action_btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=2300300100095@ipec.org.in&su=Plant+Hub+Support" target="_blank"> Send Email </a>
+    </div>
+
+    <!-- REPORT A BUG -->
+    <div class="option_box">
+      <div class="icon">
+        <i class="fas fa-bug"></i>
+      </div>
+      <h3> Report a Bug </h3>
+      <p> If you found a technical issue, please let us know so we can fix it. </p>
+      <a href="#" class="action_btn"> Report Bug </a>
+    </div>
+
+    <!-- HELP CENTER -->
+    <div class="option_box">
+      <div class="icon">
+        <i class="fas fa-circle-question"></i>
+      </div>
+      <h3>Help Center</h3>
+
+      <ul class="faq-preview">
+        <li>  How do I add a tree record? </li>
+        <li>  Can I edit my plantation entry? </li>
+        <li>  Is my data public or private? </li>
+      </ul>
+
+      <a href="#" class="view_more"> View all FAQs </a>
+    </div>
+
+    <!-- REQUEST A FEATURE -->
+    <div class="option_box">
+      <div class="icon">
+        <i class="fas fa-lightbulb"></i>
+      </div>
+      <h3>Request a Feature</h3>
+
+      <form method="post" action="#" class="feedback_form">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="Feature idea" required>
+        <textarea name="description" rows="3" placeholder="Brief description" required></textarea>
+        <button type="submit">Send Feedback</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

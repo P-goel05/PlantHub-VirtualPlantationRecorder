@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {% block title %} PLANT HUB {% endblock %}  </title>
+
+    <!-- global css -->
+    <link rel="stylesheet" href="{% static 'css/style_1.css' %} ">
+    {% block css %}{% endblock %}
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="nav_logo"> <i class="fas fa-seedling"></i>PLANT HUB</div>
+            <ul class="nav_links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'predict_growth' %}"> Growth Predictor</a></li>
+                    <li><a href="{% url 'nurseries' %}"> Nurseries </a></li>
+                    <li><a href="{% url 'weather' %}"> weather alerts </a></li>
+                {% else %}
+                    <li><a href="{% url 'forest_facts' %}">Forest Facts</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                {% endif %}
+            </ul>
+
+            <div class="nav_action">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'plant_tree' %}" class="plant_tree"> Plant a Tree </a>
+                    <a href="{% url 'viewtree' %}" class="view_tree"> view your Tree </a>
+                    <a href="{% url 'logout' %}" class="logout_btn"> Logout </a>
+                    <a href="{% url 'profile' %}" class="profile_btn"> Profile </a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="login_btn">Login</a>
+                    <a href="{% url 'signup' %}" class="signup_btn">Sign Up</a>
+                {% endif %}
+            </div>
+    </nav>
+</header>
+
+<main>
+    {% block main %}
+    <!-- Page-specific content goes here -->
+    {% endblock %}
+</main>
+
+<footer class="footer">
+    <div class="social_footer">
+        <a href="#" class="social insta"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" class="social yt"><i class="fab fa-youtube"></i> YouTube</a>
+        <a href="#" class="social fb"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" class="social li"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+    </div>
+
+    <p> © 2026 PLANT HUB. All rights reserved </p>
+</footer>
+
+</body>
+</html>

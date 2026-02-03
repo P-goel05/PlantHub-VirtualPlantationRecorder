@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Login - PLANT HUB {% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/login_1.css' %} ">
+{% endblock %}
+
+{% block main %}
+  <div class="login_wrapper">
+    <div class="login_card">
+      <h2>Welcome Back 🌿</h2>
+      <p class="subtitle">Login to your PLANT HUB account</p>
+
+      <form method="post" novalidate>
+        {% csrf_token %}
+
+        {% for field in form %}
+          <div class="form_group">
+            {{ field.label_tag }}
+            {{ field }}
+          </div>
+        {% endfor %}
+
+        <button type="submit" class="btn_login">Login</button>
+      </form>
+
+      {% if msg %}
+        <p class="error">{{ msg }}</p>
+      {% endif %}
+
+    </div>
+  </div>
+{% endblock %}

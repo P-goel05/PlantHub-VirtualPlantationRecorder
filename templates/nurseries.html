@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/nursery_1.css' %} ">
+{% endblock %}
+
+{% block main %}
+
+<div class="nursery-container">
+  <h2>🌿 Partnered Nurseries</h2>
+
+  <div class="nursery-grid">
+    {% for n in nurseries %}
+      <div class="nursery-card">
+        <h3>{{ n.name }}</h3>
+        <p>📍 {{ n.city }}</p>
+        <a href="?nursery_id={{ n.id }}" class="btn">View Details</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if selected_nursery %}
+    <h2>Nursery Details</h2>
+    <div class="nursery-details">
+
+      <h2>🏡 {{ selected_nursery.name }}</h2>
+      <p><strong>Address:</strong> {{ selected_nursery.address }}</p>
+      <p><strong>Phone:</strong> {{ selected_nursery.phone }}</p>
+
+      <h3>🌱 Available Plants</h3>
+      {% if plants %}
+        <ul>
+          {% for p in plants %}
+            <li>{{ p.plant_type }} – ₹{{ p.price }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No plants available.</p>
+      {% endif %}
+
+      <h3>🛠️ Tools</h3>
+      {% if tools %}
+        <ul>
+          {% for t in tools %}
+            <li>{{ t.tool_name }} – ₹{{ t.price }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No tools available.</p>
+      {% endif %}
+
+    </div>
+  {% endif %}
+
+</div>
+
+
+{% endblock %}

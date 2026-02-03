@@ -1,0 +1,81 @@
+.weather-container {
+    max-width: 600px;
+    margin: 40px auto 100px auto;
+    padding: 30px;
+    background-color: #f0fff4; 
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.weather-container h2 {
+    text-align: center;
+    color: #2a7f62;
+    margin-bottom: 25px;
+}
+
+.weather-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.weather-form label {
+    font-weight: 500;
+    color: #153329;
+}
+
+.weather-form select {
+    padding: 8px 12px;
+    border: 1px solid #2a7f62;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.weather-form select:focus {
+    border-color: #1f5c48;
+    box-shadow: 0 0 4px rgba(42,127,98,0.5);
+}
+
+.weather-form button {
+    padding: 10px;
+    background-color: #2a7f62;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.weather-form button:hover {
+    background-color: #1f5c48;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #2a7f62;
+    margin: 25px 0;
+    opacity: 0.3;
+}
+
+.tree-details h3 {
+    color: #2a7f62;
+    margin-top: 15px;
+}
+
+.tree-details p {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.no-weather {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-top: 15px;
+}

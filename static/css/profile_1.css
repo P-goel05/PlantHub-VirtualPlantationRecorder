@@ -1,0 +1,40 @@
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.profile-header {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  text-align: center;
+  padding: 30px 20px;
+  color: #fff;
+}
+
+.profile-icon {
+  font-size: 120px;
+  color: #ccc;
+}
+
+.profile-header h2 {
+  margin: 12px 0 5px;
+}
+
+.profile-header .email {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.profile-body {
+  padding: 25px;
+}

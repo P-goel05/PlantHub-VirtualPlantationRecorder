@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/weather_1.css' %} ">
+{% endblock %}
+
+{% block main %}
+<div class="weather-container">
+    <h2>🌦️ Tree Weather Tracker</h2>
+
+    <form method="POST" class="weather-form">
+        {% csrf_token %}
+        {{ form.tree.label_tag }}
+        {{ form.tree }}
+        <button type="submit">Check Weather</button>
+    </form>
+
+    <hr>
+
+    {% if weather %}
+        <div class="tree-details">
+            <h3>🌳 Tree Details</h3>
+            <p><strong>Name:</strong> {{ tree.tree_name }}</p>
+            <p><strong>Location:</strong> {{ city }}</p>
+
+            <h3>🌤️ Weather</h3>
+            <p><strong>Temperature:</strong> {{ weather.main.temp }} °C</p>
+            <p><strong>Condition:</strong> {{ weather.weather.0.description }}</p>
+            <p><strong>Humidity:</strong> {{ weather.main.humidity }}%</p>
+            <p><strong>Wind Speed:</strong> {{ weather.wind.speed }} m/s</p>
+
+            <!-- <p><strong>City:</strong> {{ city }}</p>
+            <p><strong>Temperature:</strong> {{ temperature }} °C</p>
+            <p><strong>Condition:</strong> {{ description }}</p>
+            <p><strong>Humidity:</strong> {{ humidity }}%</p>
+            <p><strong>Wind Speed:</strong> {{ wind }} m/s</p> --> 
+
+        </div>
+    {% else %}
+        <p class="no-weather">Select a tree to see live weather.</p>
+    {% endif %}
+</div>
+{% endblock %}

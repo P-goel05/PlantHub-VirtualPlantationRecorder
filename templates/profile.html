@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}My Profile{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile_1.css' %} ">
+{% endblock %}
+
+{% block main %}
+<div class="profile-wrapper">
+
+  <!-- Profile Card -->
+  <div class="profile-card">
+
+    <!-- Profile Header -->
+    <div class="profile-header">
+      <div class="avatar">
+        <i class="fa fa-user-circle profile-icon"></i>
+      </div>
+      <h2>{{ user.username }}</h2>
+      <p class="email">{{ user.email }}</p>
+    </div>
+
+    <!-- Profile Body -->
+    <div class="profile-body">
+        <h3>Account Details</h3>
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+

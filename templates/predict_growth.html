@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}AI Growth Prediction{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/predictgrowth_1.css' %} ">
+{% endblock %}
+
+{% block main %}
+<div class="growth-container">
+    <h2>📈 AI Tree Growth Prediction</h2>
+
+    <form method="POST" class="growth-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Predict Growth</button>
+    </form>
+
+    {% if prediction %}
+        <h3>🌱 Expected Growth</h3>
+        <p><strong>{{ prediction }} meters height </strong> in 6 months</p>
+    {% endif %}
+</div>
+{% endblock %}

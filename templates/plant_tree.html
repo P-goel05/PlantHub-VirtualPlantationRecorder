@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Plant A Tree - PLANT HUB {% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/planttrees_1.css' %} ">
+{% endblock %}
+
+{% block main %}
+<section class="plant-bg">
+  <div class="plant_container">
+    <section class="plant_card form-card fade-in">
+      <h3>🌱 Add a New Tree</h3>
+
+      <form method="POST" action="{% url 'plant_tree' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" class="btn-glow">
+          🌳 Plant Tree
+        </button>
+      </form>
+    </section>
+
+    {% if success %}
+      <div class="alert success fade-in">
+        🌿 Tree planted successfully!
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

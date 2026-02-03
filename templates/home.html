@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Home - PLANT HUB {% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/home_1.css'  %}">
+{% endblock %}
+
+{% block main %}
+
+  <section class="home_hero">  
+    <div class="hero_content">
+      <h1> Plant Today, Build A Greener Tomorrow </h1>
+      <p> Your one-stop solution for tracking trees and real environmental impact. </p>
+    </div>
+  </section>
+
+  <section class="home_intro">
+    <div class="intro_container">
+
+      <div class="intro_video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UnwMq1gGjhk?si=37ko2gUQc1HyMf55" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <!-- Right: Text -->
+      <div class="intro_text">
+        <h2> Short Introduction </h2>
+        <h3> About Plant Hub </h3>
+        <p> Plant Hub  is a digital platform thatt helps individuals and organizations track planted trees with transparency and technology. Our platform encourages plantation and ensures real time impact by connecting you with your plants. It also allows you to document your contribution. </p>
+        <p> Every tree planted is traceable, verifiable, and contributes to a sustainable future.</p>
+      </div>
+
+    </div>
+  </section>
+
+{% endblock %}

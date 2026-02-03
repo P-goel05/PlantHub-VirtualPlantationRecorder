@@ -1,0 +1,128 @@
+/* ===== ROOT VARIABLES ===== */
+:root {
+  --green: #2ecc71;
+  --dark-green: #27ae60;
+  --light-green: #eafaf1;
+  --card-bg: #ffffff;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== MAIN WRAPPER ===== */
+.view_plant {
+  width: 90%;
+  margin: 40px auto 150px auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  background-color: #f9faf8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ===== CARD BASE ===== */
+.view_card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.view_card h3 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  color: var(--dark-green);
+}
+
+/* ===== TABLE ===== */
+.table-card table {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.table-card th {
+  background: var(--light-green);
+  color: var(--dark-green);
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.table-card td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.table-card tr {
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.table-card tr:hover {
+  background: #f1fdf6;
+  transform: scale(1.01);
+}
+
+/* ===== STATS SECTION ===== */
+.view_stats {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.stat-box {
+  background: #1d634b;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  animation: popIn 0.6s ease forwards;
+}
+
+.stat-box:hover {
+  transform: scale(1.05);
+}
+
+.stat-box h4 {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.stat-box p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===== GROWTH SECTION ===== */
+.growth {
+  grid-column: span 2;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 22px;
+  background: #e6e6e6;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green), var(--dark-green));
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 22px;
+}
+
+

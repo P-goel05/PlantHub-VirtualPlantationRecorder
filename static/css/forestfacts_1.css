@@ -1,0 +1,106 @@
+/* ===== SECTION ===== */
+.forest-section {
+    padding: 20px 50px 60px 50px;
+    background: linear-gradient(135deg, #f5fbf8, #ffffff);
+    margin-bottom: 90px;
+}
+
+.forest-section h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    text-transform: capitalize;
+    color: #1d634b;
+    margin-bottom: 45px;
+}
+
+/* ===== GRID ===== */
+.forest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 50px;
+}
+
+/* ===== CARD ===== */
+.forest-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0efe8;
+}
+
+.forest-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== IMAGE ===== */
+.forest-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background: #dcedc8; /* soft eco placeholder */
+}
+
+/* ===== TAGS ===== */
+.tag {
+    align-self: flex-start;
+    margin: 16px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Tag Colors (eco aligned) */
+.tag.climate { background: #2a7f62; }
+.tag.tree { background: #1d634b; }
+.tag.tech { background: #0277bd; }
+.tag.business { background: #6a1b9a; }
+
+/* ===== DATE ===== */
+.forest-card .date {
+    font-size: 12px;
+    color: #6f8f84;
+    margin: 0 16px;
+}
+
+/* ===== TITLE ===== */
+.forest-card h3 {
+    font-size: 1.25rem;
+    margin: 10px 16px;
+    color: #153329;
+    line-height: 1.35;
+}
+
+/* ===== DESCRIPTION ===== */
+.forest-card .desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a6d61;
+    margin: 0 16px 16px;
+    flex-grow: 1;
+}
+
+/* ===== BUTTON ===== */
+.read-more {
+    margin: 16px;
+    padding: 11px;
+    border: none;
+    border-radius: 20px;
+    background: #2a7f62;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.read-more:hover {
+    background: #3f7767;
+    transform: translateY(-2px);
+}

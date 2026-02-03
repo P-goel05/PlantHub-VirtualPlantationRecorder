@@ -1,0 +1,114 @@
+/* 🌿 FULL PAGE BACKGROUND */
+.plant-bg {
+    position: relative;
+    min-height: calc(100vh - 120px); /* avoids footer overlap */
+    padding: 70px 0 140px; /* bottom space for footer */
+}
+
+
+/* 🌱 MAIN CONTAINER */
+.plant_container {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 🌳 FORM CARD */
+.plant_card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 520px;
+    padding: 30px 28px;
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+    border-top: 6px solid #2e7d32;
+    animation: fadeUp 0.8s ease both;
+}
+
+/* 🌿 TITLE */
+.plant_card h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2e7d32;
+    margin-bottom: 22px;
+}
+
+/* 🧾 FORM ELEMENTS */
+.plant_card form p {
+    margin-bottom: 16px;
+}
+
+.plant_card label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #355f4e;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.plant_card input,
+.plant_card textarea,
+.plant_card select {
+    width: 90%;
+    padding: 11px 12px;
+    border-radius: 8px;
+    border: 1px solid #c8e6c9;
+    background: #f9fdfb;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+.plant_card textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.plant_card input:focus,
+.plant_card textarea:focus,
+.plant_card select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 0 3px rgba(76,175,80,0.18);
+    background: #ffffff;
+}
+
+/* 🌟 GLOW BUTTON */
+.btn-glow {
+    width: 100%;
+    margin-top: 22px;
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #43a047, #2e7d32);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 8px 18px rgba(46,125,50,0.35);
+}
+
+.btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(46,125,50,0.45);
+}
+
+/* ✅ SUCCESS MESSAGE */
+.alert.success {
+    margin-top: 22px;
+    padding: 14px;
+    border-radius: 12px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.helptext{
+    display: block;
+    margin-top: 12px;
+}

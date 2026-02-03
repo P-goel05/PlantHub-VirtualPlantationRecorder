@@ -1,0 +1,111 @@
+/* ===== Signup Form Container ===== */
+.form-container {
+    max-width: 420px;
+    margin: 60px auto 120px auto;
+    padding: 32px 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* ===== Heading ===== */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 26px;
+    color: #2a7f62;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Django form paragraphs ===== */
+.form-container form p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+/* ===== Labels ===== */
+.form-container label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #2f3e34;
+    font-size: 14px;
+}
+
+/* ===== Inputs ===== */
+.form-container input {
+    padding: 11px 12px;
+    border-radius: 8px;
+    border: 1px solid #cfd8dc;
+    font-size: 14px;
+    transition: all 0.25s ease;
+    background: #f9fdfb;
+}
+
+.form-container input:focus {
+    outline: none;
+    border-color: #2a7f62;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(42, 127, 98, 0.15);
+}
+
+/* ===== Help text (password hints) ===== */
+.form-container .helptext {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* ===== Submit Button ===== */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #2a7f62, #3aa17e);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-container button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(42, 127, 98, 0.25);
+}
+
+/* ===== Django Error Messages ===== */
+.form-container .errorlist {
+    color: #c62828;
+    font-size: 13px;
+    margin-top: 6px;
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+/* ===== Alerts (Messages Framework) ===== */
+.alert {
+    max-width: 420px;
+    margin: 15px auto;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.alert-success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.alert-error {
+    background: #fdecea;
+    color: #c62828;
+    border: 1px solid #f5c6cb;
+}
